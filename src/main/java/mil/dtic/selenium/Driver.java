@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Driver {
 
@@ -44,9 +44,9 @@ public class Driver {
 			// Setup the chromedriver using WebDriverManager instead of using System.setProperty
 			//WebDriverManager.chromedriver().setup();
 
-			//WebDriverManager.chromedriver().version("76.0.3809.126").setup();
+		WebDriverManager.chromedriver().version("95.0.4638.17").setup();
 			// Create driver object for Chrome
-			System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
+			//System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
 
 			ChromeOptions options = new ChromeOptions();
 			logger.info("Setting Chrome driver ...");
