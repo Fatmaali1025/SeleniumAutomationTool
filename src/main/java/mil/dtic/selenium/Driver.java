@@ -44,7 +44,7 @@ public class Driver {
 			// Setup the chromedriver using WebDriverManager instead of using System.setProperty
 			//WebDriverManager.chromedriver().setup();
 
-		WebDriverManager.chromedriver().version("95.0.4638.17").setup();
+			WebDriverManager.chromedriver().version("95.0.4638.17").setup();
 			// Create driver object for Chrome
 			//System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
 

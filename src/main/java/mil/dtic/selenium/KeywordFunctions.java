@@ -82,21 +82,22 @@ public class KeywordFunctions {
 				result.setResult(false);
 			}
 			return result;
-		} else if (keyword.equalsIgnoreCase("Input")) {
-			try {
-				logger.info("In keyword: " +  keyword + " inputValue: " + inputValue + " webElementValue:  " + webElementValue);
-				runDriver(webElement, webElementValue).clear();
-				runDriver(webElement, webElementValue).sendKeys(inputValue);
-				logger.info("Input is performed sucessfully");
-				result.setMessage("Input is performed sucessfully");
-				result.setResult(true);
-			} catch (Exception e) {
-				logger.error("Not able to enter input : " + e.getMessage());
-				result.setMessage("Not able to enter input");
-				result.setResult(false);
-			}
-			return result;
-			
+		}
+			else if (keyword.equalsIgnoreCase("Input")) {
+				try {
+					logger.info("In keyword: " +  keyword + " inputValue: " + inputValue + " webElementValue:  " + webElementValue);
+					runDriver(webElement, webElementValue).clear();
+					runDriver(webElement, webElementValue).sendKeys(inputValue);
+					logger.info("Input is performed sucessfully");
+					result.setMessage("Input is performed sucessfully");
+					result.setResult(true);
+				} catch (Exception e) {
+					logger.error("Not able to enter input : " + e.getMessage());
+					result.setMessage("Not able to enter input");
+					result.setResult(false);
+				}
+				return result;
+				
 		} else if (keyword.equalsIgnoreCase("dropdown")) {
 			try {
 				Select dropDown = new Select(runDriver(webElement, webElementValue));
